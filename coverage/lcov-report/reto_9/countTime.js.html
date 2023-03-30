@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for #2/countHours.js</title>
+    <title>Code coverage report for reto_9/countTime.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,20 +19,20 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">#2</a> countHours.js</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">reto_9</a> countTime.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>15/15</span>
+                <span class='fraction'>17/17</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>8/10</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>13/13</span>
+                <span class='fraction'>14/14</span>
             </div>
         
             
@@ -82,52 +82,70 @@
 <a name='L17'></a><a href='#L17'>17</a>
 <a name='L18'></a><a href='#L18'>18</a>
 <a name='L19'></a><a href='#L19'>19</a>
-<a name='L20'></a><a href='#L20'>20</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">1095x</span>
-<span class="cline-any cline-yes">314x</span>
-<span class="cline-any cline-yes">314x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">781x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">781x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">781x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">function countHours(year, holidays) {
-    let bisiesto = year % 4 === 0 ? <span class="branch-0 cbranch-no" title="branch not covered" >true </span>: false;
-    let fecha = new Date('01/01/' + year);
-    let counter = 0;
-    for (let i = 0, days = bisiesto ? <span class="branch-0 cbranch-no" title="branch not covered" >366 </span>: 365; i &lt; days; i++) {
-        if (fecha.getDay() === 0 || fecha.getDay() === 6) {
-            fecha.setDate(fecha.getDate() + 1);
-            continue;
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">37x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">37x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">37x</span>
+<span class="cline-any cline-yes">37x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">function countTime(leds) {
+    const secs = 7;
+&nbsp;
+    let cycles = 0;
+    while (leds.includes(0)) {
+        cycles++;
+        let ledStatus = {}
+        for (let i = 0; i &lt; leds.length; i++) {
+            let cond = i === 0 ?
+                leds[leds.length - 1] === 1 :
+                leds[i - 1] === 1;
+&nbsp;
+            if (cond) { ledStatus[i] = 1 }
         }
-        let formatted = String(fecha.getMonth() + 1).padStart(2, '0') +
-            '/' + String(fecha.getDate()).padStart(2, '0');
-        if (holidays.includes(formatted)) {
-            counter += 2;
+        for (let i = 0; i &lt; leds.length; i++) {
+            let keys = Object.keys(ledStatus);
+            if (keys.includes(String(i))) {
+                leds[i] = ledStatus[i];
+            }
         }
-        fecha.setDate(fecha.getDate() + 1);
     }
-    // let cadena = counter === 1 ? counter+' día' : counter+' días'
-    return counter;
+&nbsp;
+    return secs * cycles;
 }
-module.exports = countHours;</pre></td></tr></table></pre>
+&nbsp;
+module.exports = countTime;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-03-16T08:52:23.689Z
+                at 2023-03-16T09:18:24.619Z
             </div>
         <script src="../prettify.js"></script>
         <script>

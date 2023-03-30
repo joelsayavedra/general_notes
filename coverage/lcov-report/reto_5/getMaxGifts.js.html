@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for #2/countHours.js</title>
+    <title>Code coverage report for reto_5/getMaxGifts.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">#2</a> countHours.js</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">reto_5</a> getMaxGifts.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">80.76% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>15/15</span>
+                <span class='fraction'>21/26</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80% </span>
+                <span class="strong">70% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>8/10</span>
+                <span class='fraction'>14/20</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">66.66% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>2/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">88.23% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>13/13</span>
+                <span class='fraction'>15/17</span>
             </div>
         
             
@@ -82,52 +82,82 @@
 <a name='L17'></a><a href='#L17'>17</a>
 <a name='L18'></a><a href='#L18'>18</a>
 <a name='L19'></a><a href='#L19'>19</a>
-<a name='L20'></a><a href='#L20'>20</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">1095x</span>
-<span class="cline-any cline-yes">314x</span>
-<span class="cline-any cline-yes">314x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">781x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">781x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">781x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">function countHours(year, holidays) {
-    let bisiesto = year % 4 === 0 ? <span class="branch-0 cbranch-no" title="branch not covered" >true </span>: false;
-    let fecha = new Date('01/01/' + year);
-    let counter = 0;
-    for (let i = 0, days = bisiesto ? <span class="branch-0 cbranch-no" title="branch not covered" >366 </span>: 365; i &lt; days; i++) {
-        if (fecha.getDay() === 0 || fecha.getDay() === 6) {
-            fecha.setDate(fecha.getDate() + 1);
-            continue;
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">function getMaxGifts(giftsCities, maxGifts, maxCities) {
+&nbsp;
+    giftsCities.sort((a, b) =&gt; {
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (a === b) { <span class="cstat-no" title="statement not covered" >return 0 </span>}
+        return a &lt; b ? 1 : -1;
+    });
+&nbsp;
+    let values = [];
+&nbsp;
+    for (let i = 0; i &lt; giftsCities.length; i++) {
+        for (let j = 0; j &lt; giftsCities.length; j++) {
+            if (j === i) { continue; }
+            for (let k = 0; k &lt; giftsCities.length; k++) {
+                if (k === i || k === j) { continue; }
+                let sum = giftsCities[i] + giftsCities[j] + giftsCities[k]
+                if (sum === maxGifts) { return sum }
+                else <span class="missing-if-branch" title="if path not taken" >I</span>if (sum &lt;= maxGifts) { <span class="cstat-no" title="statement not covered" >values.push(sum) </span>}
+            }
         }
-        let formatted = String(fecha.getMonth() + 1).padStart(2, '0') +
-            '/' + String(fecha.getDate()).padStart(2, '0');
-        if (holidays.includes(formatted)) {
-            counter += 2;
-        }
-        fecha.setDate(fecha.getDate() + 1);
     }
-    // let cadena = counter === 1 ? counter+' día' : counter+' días'
-    return counter;
+&nbsp;
+    values.sort(<span class="fstat-no" title="function not covered" >(a</span>, b) =&gt; {
+<span class="cstat-no" title="statement not covered" >        if (a === b) { <span class="cstat-no" title="statement not covered" >return 0 </span>}</span>
+<span class="cstat-no" title="statement not covered" >        return a &lt; b ? 1 : -1;</span>
+    });
+&nbsp;
+    return values[0] || 0;
 }
-module.exports = countHours;</pre></td></tr></table></pre>
+&nbsp;
+module.exports = getMaxGifts;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-03-16T08:52:23.689Z
+                at 2023-03-16T09:18:24.619Z
             </div>
         <script src="../prettify.js"></script>
         <script>

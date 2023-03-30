@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for #2/countHours.js</title>
+    <title>Code coverage report for reto_3/countHours.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">#2</a> countHours.js</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">reto_3</a> countHours.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>15/15</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>8/10</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>13/13</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
@@ -77,57 +77,42 @@
 <a name='L12'></a><a href='#L12'>12</a>
 <a name='L13'></a><a href='#L13'>13</a>
 <a name='L14'></a><a href='#L14'>14</a>
-<a name='L15'></a><a href='#L15'>15</a>
-<a name='L16'></a><a href='#L16'>16</a>
-<a name='L17'></a><a href='#L17'>17</a>
-<a name='L18'></a><a href='#L18'>18</a>
-<a name='L19'></a><a href='#L19'>19</a>
-<a name='L20'></a><a href='#L20'>20</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">1095x</span>
-<span class="cline-any cline-yes">314x</span>
-<span class="cline-any cline-yes">314x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">781x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">781x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">781x</span>
+<a name='L15'></a><a href='#L15'>15</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">function countHours(year, holidays) {
-    let bisiesto = year % 4 === 0 ? <span class="branch-0 cbranch-no" title="branch not covered" >true </span>: false;
-    let fecha = new Date('01/01/' + year);
-    let counter = 0;
-    for (let i = 0, days = bisiesto ? <span class="branch-0 cbranch-no" title="branch not covered" >366 </span>: 365; i &lt; days; i++) {
-        if (fecha.getDay() === 0 || fecha.getDay() === 6) {
-            fecha.setDate(fecha.getDate() + 1);
-            continue;
-        }
-        let formatted = String(fecha.getMonth() + 1).padStart(2, '0') +
-            '/' + String(fecha.getDate()).padStart(2, '0');
-        if (holidays.includes(formatted)) {
-            counter += 2;
-        }
-        fecha.setDate(fecha.getDate() + 1);
-    }
-    // let cadena = counter === 1 ? counter+' día' : counter+' días'
-    return counter;
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">function distributeGifts(packOfGifts, reindeers) {
+    let maxWeight = reindeers.reduce((accum, reindeer) =&gt; {
+        return accum + reindeer.length * 2;
+    }, 0);
+&nbsp;
+    let packWeigth = packOfGifts.reduce((accum, gift) =&gt; {
+        return accum + gift.length;
+    }, 0);
+&nbsp;
+    return Math.floor(maxWeight / packWeigth);
 }
-module.exports = countHours;</pre></td></tr></table></pre>
+&nbsp;
+module.exports = distributeGifts;
+&nbsp;
+&nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-03-16T08:52:23.689Z
+                at 2023-03-16T09:18:24.619Z
             </div>
         <script src="../prettify.js"></script>
         <script>
